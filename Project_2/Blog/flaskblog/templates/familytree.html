@@ -18,8 +18,8 @@
     {% endif %}
 </head>
 <body>
-    <!-- <header class="site-header"> -->
-        <!-- <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+    <header class="site-header">
+        <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
           <div class="container">
             <img src="static/profile_pics/logo.jpg" width="50" height="50"/>
             <a class="navbar-brand mr-6" href="/">Legacy Lion</a>
@@ -42,46 +42,29 @@
                 {% endif %}
               </div>
             </div>
-        </nav> -->
-      <!-- </header> -->
-      <body>
-        <div class="container"> 
-          <div class="row">
-            <div class="content">
-              <form>
-                  <div class="formBox">
-                    <label for="name">First and Last Name</label>
-                    <input type="text" id="name" placeholder="Amelia Smith"/>
-                  </div>
-                  <div class="formBox">
-                    <label for="id">Enter ID:</label>
-                    <input type="number" id="id" placeholder="ID"/>
-                  </div>
-                  <div class="formBox">
-                    <label for="pid">Enter Your Parent ID:</label>
-                    <input type="number" id="pid" placeholder="PID"/>
-                  </div>
-                  <div class="formBox">
-                    <label for="profile_img">Type Image Link:</label>
-                    <input type="text" id="profile_img" placeholder="Don't be Shy!"/>
-                  </div>
-                  <div class="formBox">
-                    <button id="btn" class="btn btn-success">Click to Add</button>
-                  </div>
-                  <div class="formBox">
-                    <button onClick="history.go(0);" id="button" type="button" class="btn btn-danger">Click to Remove</button>
-                  </div>
-              </form>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <script src="static/data/OrgChart.js"></script>
-              <div id="orgchart"></div>
-            </div>
-          </div>
-        </div>  
-      </body>
-      <script src="static/plots/plot_three.js"></script>
+        </nav>
+    </header>
+    <div class="container"> 
+      <div class="row">
+        <div class="col-md-3">
+          <h7>Follow instructions below:</h7>
+          <br>
+          <p style="padding-top: 20px;">NOTE: Inputs are not connected to SQL. Make sure you export your hierarchy prior to refreshing or exiting the page.</p>
+          <p>1. Select the three dots to Edit the name, address, email, and more, or to add a new member of the family.</p>
+          <img src="static/post_pics/Edit.jpg" width="150" height="150"/>
+          <br>
+          <p style="padding-top: 20px;">2. If you would like to add a picture, add the online image url source. At this moment, the upload option is not available.</p>
+          <p>3. After you are done, select the arrow to submit (see below)</p>
+          <img src="static/post_pics/Submit.jpg" width="150" height="100"/>
+          <p style="padding-top: 20px;">4. Export your family hierarchy by selecting one of the export options in the upper menu of your family tree.</p>
+          <img src="static/post_pics/Export.jpg" width="250" height="100"/>
+        </div>
+        <div class="col-md-9">
+          <script src="static/data/OrgChart.js"></script>
+          <div id="orgchart"></div>
+        </div>
+      </div>
+    </div>
+    <script src="static/plots/plot_three.js"></script>
 </body>
 </html>
